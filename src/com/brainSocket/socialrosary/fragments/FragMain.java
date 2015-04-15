@@ -9,9 +9,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
@@ -25,7 +25,7 @@ import com.brainSocket.socialrosary.AppBaseActivity;
 import com.brainSocket.socialrosary.HomeCallbacks;
 import com.brainSocket.socialrosary.R;
 import com.brainSocket.socialrosary.ZicerSelectDialogForMe;
-import com.brainSocket.socialrosary.ZicerSelectDialogForMe.DialogZickerPickerSelectForMe_Interface;
+import com.brainSocket.socialrosary.ZicerSelectDialogForMe.selfZickerListener;
 import com.brainSocket.socialrosary.data.DataStore;
 import com.brainSocket.socialrosary.data.DataStore.DataRequestCallback;
 import com.brainSocket.socialrosary.data.DataStore.DataStoreUpdatListener;
@@ -33,7 +33,6 @@ import com.brainSocket.socialrosary.data.ServerResult;
 import com.brainSocket.socialrosary.helpers.AnimationHelper;
 import com.brainSocket.socialrosary.model.AppContact.SOCIAL_MEDIA_ACCOUNT_TYPE;
 import com.brainSocket.socialrosary.model.AppConversation;
-import com.google.android.gms.internal.ay;
 
 public class FragMain extends Fragment implements OnClickListener{
 
@@ -51,19 +50,32 @@ public class FragMain extends Fragment implements OnClickListener{
 	ConversationsAdapter adapter ;
 	ArrayList<AppConversation> converastions ;
 	View btnStartSelfTask ;
+	ZicerSelectDialogForMe dialog;
 	
-	
-	DialogZickerPickerSelectForMe_Interface callBack=new DialogZickerPickerSelectForMe_Interface() {
-		
- 		@Override
-		public void dialogZickerSelectForMePositiveClick(DialogFragment dialog, String zickerselected, int NumberPickerValue) {
- 			DataStore.getInstance().addSelfZeker(NumberPickerValue, 1, apiAddZickerToMySelfCallback);
-		}
+	selfZickerListener callBack=new selfZickerListener() {
 		
 		@Override
-		public void dialogZickerSelectForMeNegativeClick(DialogFragment dialog) {
-			Toast.makeText(getActivity(), "OperationCansled!!", Toast.LENGTH_SHORT).show();	
+		public void onSelfZickerAccepted(DialogFragment dialog,
+				String zickerselected, int NumberPickerValue) {
+			
+			DataStore.getInstance().addSelfZeker(NumberPickerValue, 1, apiAddZickerToMySelfCallback);
+			//when user click button dialog will be dismissed
+			dialog.dismiss();
+			Toast.makeText(getActivity(), "jzakAllahAlkher", Toast.LENGTH_SHORT).show();
+			//TODO Add code to open new CountingActivity!!
+			
+			
 		}
+
+		@Override
+		public void onSelfZickerCaseled(DialogFragment dialog) {
+			dialog.dismiss();
+			
+			//TODO toast user that an operation is canseled!!
+			Toast.makeText(getActivity(), "operationCanseled!!", Toast.LENGTH_SHORT).show();
+		}
+		
+		
 	};
  	 	
 	//callback for mainActivity
@@ -231,8 +243,9 @@ public class FragMain extends Fragment implements OnClickListener{
 	}
 	
 	private void startSelfTask (){
-		ZicerSelectDialogForMe dialog=new ZicerSelectDialogForMe(callBack);
+		dialog=new ZicerSelectDialogForMe(callBack);
 		dialog.show(getActivity().getSupportFragmentManager(), "");
+		
 	}
 
 	

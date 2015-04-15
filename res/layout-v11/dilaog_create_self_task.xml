@@ -11,10 +11,10 @@
     <ListView
         android:id="@+id/lvZickersList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
 		android:layout_marginBottom="50dp"
-        android:divider="@null"
         android:dividerHeight="4dp"
+        android:choiceMode="singleChoice"
         tools:listitem="@layout/row_dilaog_zicker_list" >
    	</ListView>
     

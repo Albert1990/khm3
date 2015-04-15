@@ -8,6 +8,7 @@ import android.os.Handler;
 import com.brainSocket.socialrosary.RosaryApp;
 import com.brainSocket.socialrosary.data.GCMHandler.AppGcmListener;
 import com.brainSocket.socialrosary.model.AppContact;
+import com.brainSocket.socialrosary.model.AppContact.SOCIAL_MEDIA_ACCOUNT_TYPE;
 import com.brainSocket.socialrosary.model.AppConversation;
 import com.brainSocket.socialrosary.model.AppConversation.CONVERSATION_TYPE;
 import com.brainSocket.socialrosary.model.AppEvent;
@@ -369,6 +370,7 @@ public class DataStore {
 				}).start();
 			}
 			
+			
 			@Override
 			public void onPlayServicesError() {
 				//Configuration.displayToast("onPlayServicesError", Toast.LENGTH_SHORT);
@@ -426,6 +428,8 @@ public class DataStore {
 			for (AppContact contatc : contacts) {
 				if(!usersWithSessionsId.contains(contatc.getPhoneNum())){
 					AppConversation con = new AppConversation(contatc) ;
+					if("0933422745".equals(contatc.getPhoneNum()))
+						contatc.setNetwork(SOCIAL_MEDIA_ACCOUNT_TYPE.SAB3EEN);
 					conversations.add(con);
 				}
 			}
@@ -491,7 +495,7 @@ public class DataStore {
 		if(enrolledFriensds == null )
 			return false ;
 		for(AppContact con : enrolledFriensds){
-			if(con.getPhoneNum().equals(phoneNumber) || phoneNumber.equals("0933422745") )
+			if(con.getPhoneNum().equals(phoneNumber) )
 				return true;
 		}
 		return false ;
