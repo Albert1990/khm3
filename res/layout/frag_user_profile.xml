@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" >
+    
+    <FrameLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/shape_oval_contact_ring" />
+
+        <com.brainSocket.khednima3ak3.views.MLRoundedImageView
+            android:id="@+id/ivUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_male_user" />
+    </FrameLayout>
+    
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/frag_user_profile_photo_for_face"
+                android:textSize="@dimen/ts_text_small"
+                android:textColor="@color/app_theme_orange"
+                />
+    
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/login_prompt_real_name"
+                android:textSize="@dimen/ts_text_small"
+                android:textColor="@color/app_theme_orange"
+                />
+
+            <com.brainSocket.khednima3ak3.views.EditTextCustomFont
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/login_form_input_margin"
+                android:layout_marginRight="@dimen/login_form_input_margin"
+                android:layout_marginTop="15dp"
+                android:hint="@string/login_prompt_fname"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@android:color/black"
+                app:fontId="1" />
+
+            <com.brainSocket.khednima3ak3.views.EditTextCustomFont
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/login_form_input_margin"
+                android:layout_marginRight="@dimen/login_form_input_margin"
+                android:layout_marginTop="15dp"
+                android:hint="@string/login_prompt_lname"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@android:color/black"
+                app:fontId="1" />
+
+            <com.brainSocket.khednima3ak3.views.EditTextCustomFont
+                android:id="@+id/etJob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/login_form_input_margin"
+                android:layout_marginRight="@dimen/login_form_input_margin"
+                android:layout_marginTop="15dp"
+                android:hint="@string/login_prompt_job"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@android:color/black"
+                app:fontId="1" />
+            
+            <com.brainSocket.khednima3ak3.views.EditTextCustomFont
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/login_form_input_margin"
+                android:layout_marginRight="@dimen/login_form_input_margin"
+                android:layout_marginTop="15dp"
+                android:hint="@string/frag_user_profile_age"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@android:color/black"
+                app:fontId="1" />
+                
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnSaveUserProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rounded_orange"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/frag_user_profile_save"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ts_text_normal"
+                app:fontId="2" />
+    
+</LinearLayout>

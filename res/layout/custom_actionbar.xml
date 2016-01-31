@@ -2,47 +2,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/ivMenu"
-        android:layout_width="40dp"
-        android:layout_height="35dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="15dp"
-        android:paddingRight="5dp"
-        android:src="@drawable/ic_menu" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
 
-    <ImageView
-        android:id="@+id/ivBack"
-        android:layout_width="40dp"
-        android:layout_height="28dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="15dp"
-        android:paddingRight="5dp"
-        android:visibility="gone"
-        android:src="@drawable/ic_friends_active" />
+        <ImageView
+            android:id="@+id/actionNotifications"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_notification" />
+        
+        <ImageView
+            android:id="@+id/actionChat"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_chat" />
 
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_menu" />
+    </LinearLayout>
 
-
-
-    <com.brainSocket.socialrosary.views.TextViewCustomFont
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
         android:id="@+id/tvFragTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textColor="@android:color/white"
         android:textSize="@dimen/ts_title_big"
-        android:visibility="gone"
         app:fontId="2" />
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_app_name_white" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>

@@ -1,21 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Social Rosary</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">خدني معك v2</string>
+    <string name="trial_version">نسخة تجريبية</string>
+    <string name="app_id">215238498686613</string>
     <string name="menu_settings">Settings</string>
 
     <!-- ERRORS -->
-    <string name="error_intrnet">لا يوجد أتصال بالإنترنت</string>
+    <string name="error_intrnet">لا يوجد إتصال بالإنترنت</string>
     <string name="error_intrnet_title">خطأ في الإتصال</string>
-    <string name="error_connection_failed">تعذر إتمام العملية ... خطأ في الإتصال</string>
+    <string name="error_connection_failed">تعذر إتمام العملية... خطأ في الإتصال</string>
+    <string name="error_operation_failed">لايمكن الإتمام الآن الرجاء المحاولة لاحقاً</string>
+    <string name="error_events_refresh_failed">لم يتم تحديث الأذكار</string>
+    <string name="error_action_blocked_in_trial_mode">لا تنسى تأكيد حسابك</string>
+
+    <!-- warn -->
+    <string name="warn_you_have_no_friends">ليس لديك أصدقاء مشتركون في سبعين يمكنك أن ترسل لهم دعوات ليعم الخير أو أن تقوم بالاستغفار منفردا</string>
+    <string name="warn_you_are_in_trial">انت ضمن فترة التجربيب و لم تقم بـتأكيد حسابك بعد, اضغط لإدخال رمز التأكيد</string>
+    
+    <!-- GENERIC -->
+    <string name="is_version_valid_msg_outdated">نسخة جديدة من تطبيق سبعين متوفرة بمجموعة من التحديثات والخصائص الجديدة</string>
+    <string name="is_version_valid_download">تحديث التطبيق</string>
+    <string name="is_version_valid_cansel">ربما لاحقاً</string>
+    <string name="is_version_valid_msg_update_rquired">نسخة التطبيق الحالية غير فعالة.. يرجى التحديث إلى أحدث نسخة</string>
+    <string name="place_holder">---</string>
+    <string name="me">أنا</string>
 
     <!-- warnings -->
     <string name="pleas_wait">الرجاءالإنتظار</string>
 
     <!-- conversation -->
-    <string name="conversation_btn_send_part1">ارسل ذكرا لى </string>
-    <string name="conversation_no_events">ليس هناك أحداث سابقة لعرضها</string>
+    <string name="conversation_input_hint">اكتب رسالة</string>    
+    <string name="conversation_msg_submit_failed">تعذر ارسال الرسالة, تحقق من الاتصال</string>
+    <string name="conversation_no_msgs_part_1">لم يتم تبادل أي رسائل بينك و بين هذا المستخدم</string>
+    <string name="conversation_no_msgs_desc">قم بارسال رسالة جديدة</string>
+
+    <!-- event prompt -->
+    <string name="event_prompt_msg_part1">أرسلَ إليك</string>
+    <string name="event_prompt_msg_part2">طلب ذكر جديد</string>
+    <string name="event_prompt_time">مرة</string>
+    <string name="event_prompt_times">مرات</string>
+    <string name="event_btn_cansel">لاحقاً</string>
+    <string name="event_btn_accept">قبول المهمة</string>
+
+    <!-- Notinfication -->
+    <string name="notification_event_accepted_msg_part1">وافق</string>
+    <string name="notification_event_rejected_msg_part1">لم يوافق</string>
+    <string name="notification_event_msg_part2">على طلب الذكر</string>
+    <string name="notification_event_completed_msg_part1">أتم</string>
+    <string name="notification_event_completed_msg_part2">الذكر الذي أرسلته</string>
+
+    <!-- Do Task -->
+    <string name="do_task_done">إنتهى</string>
+    <string name="do_task_the_ziker">الذكر</string>
+    <string name="do_task_update_failed_msg">لم يتم تسجيل الذكر الذي قمت به \n تأكد من الاتصال</string>
+    <string name="do_task_update_failed_btn1">حاول مجدداً</string>
+    <string name="do_task_update_failed_btn2">إلغاء الأمر</string>
+
+    <!-- diag ctreate -->
+    <string name="diag_create_err_choose_ziker_first">قم باختيار ذكر أولاً</string>
+    <string name="diag_create_title_self">إختر ذكراً لتبدأ</string>
+    <string name="diag_create_title_reply">إختر ذكراً لترد الخير</string>
+    <string name="diag_create_title_with_peer">إختر ذكراً لترد</string>
+
+    <!-- weekPicker -->
+    <string name="weekday_sun">احد</string>
+    <string name="weekday_mon">اثنين</string>
+    <string name="weekday_tue">ثلاثاء</string>
+    <string name="weekday_wed">اربعاء</string>
+    <string name="weekday_thu">خميس</string>
+    <string name="weekday_fri">جمعة</string>
+    <string name="weekday_sat">سبت</string>
+    
+    <!-- add Trip -->
+    <string name="add_trip_title">انشاء رحلة جديدة</string>
+    <string name="add_trip_title_sub">قم بوضع تفاصيل رحلتك لنجد لك أصدقاء جدد تقوم بايصالهم على طريقك و تتشارك التكاليف معهم</string>
+    <string name="add_trip_destination_hint">ل وين رايح؟</string>
+    <string name="add_trip_origin_hint">من وين طالع؟</string>
+    <string name="add_trip_title_time">حدد موعد الرحلة</string>
+    <string name="add_trip_title_date">حدد تاريخ الرحلة</string>
+    <string name="add_trip_title_weekdays">حدد أيام الرحلة</string>
+    <string name="add_trip_title_price">حدد التسعيرة لكل راكب</string>
+    <string name="add_trip_error_date_not_set">قم بتحديد يوم الرحلة</string>
+    <string name="add_trip_error_time_not_set">قم بتحديد موعد الرحلة</string>
+    <string name="add_trip_error_orig_not_set">قم بتحديد مكان الانطلاق</string>
+    <string name="add_trip_error_dest_not_set">قم بتحديد الوجهة</string>
+    <string name="add_trip_error_week_days_not_set">قم بتحديد أيام الرحلة</string>
+    <string name="add_trip_error_orig_choose_from_list">اختر مكان النطلاق الأقرب اليك من القائمة</string>
+    <string name="add_trip_error_dest_choose_from_list">اختر الوجهة الأقرب اليك من القائمة</string>
+    <string name="add_trip_btn_submit">ارسال</string>
+    <string name="add_trip_confirm_dialog_title">خيارات خصوصية الرحلة</string>
+    <string name="add_trip_confirm_dialog_desc">هل تريد السماح للأشخاص الراغبين بالاشتراك معك في هذه الرحلة بالاتصال بك؟</string>
+    <string name="add_trip_confirm_dialog_ok">نعم</string>
+    <string name="add_trip_confirm_dialog_cancel">لا</string>
+    
     
     <!-- LOG-IN -->
     <string name="action_sign_in_register"><b>تسجيل الدخول</b> أو الإشتراك</string>
@@ -24,44 +102,236 @@
     <string name="signin">تسجيل الدخول</string>
     <string name="signup">الإشتراك بالخدمة</string>
     <string name="male">ذكر</string>
-    <string name="create_account">انشاء حساب جديد</string>
+    <string name="create_account">إنشاء حساب جديد</string>
     <string name="or">أو</string>
-    <string name="your_account_safe">لن يتم نشر اي محتوى على صفحتك الشخصية بدون تصريح منك</string>
+    <string name="your_account_safe">لن يتم نشر أي محتوى على صفحتك الشخصية بدون تصريح منك</string>
     <string name="enter_phoen_num_header">أدخل رقم  هاتفك لتصلك رسالة تأكيد حسابك على هذا الرقم</string>
-    <string name="local_signup_form_header">تسجيل دخولك من خلال facebook يسهل عليك ايجاد اصدقائك على التطبيق</string>
+    <string name="local_signup_form_header">تسجيل دخولك من خلال facebook يسهل عليك ايجاد أصدقائك على التطبيق</string>
     <string name="local_signin_form_header">سجل الدخول بحساب أنشأته سابقا</string>
     <string name="prompt_uesrname">اسم المستخدم</string>
-    <string name="prompt_email">أدخل رقم جوالك</string>
+    <string name="prompt_email">00963....</string>
     <string name="prompt_password">كلمة السر</string>
     <string name="login_with_facebook">فيسبوك</string>
     <string name="is_male">ذكر</string>
     <string name="error_field_required">يجب ملئ هذا الحقل</string>
-    <string name="error_signingin">فشلت عملية تسجيل الدخول ... أعد المحاولة</string>
-    <string name="error_global_phone">لا تستخدم رقم هاتف دولي </string>
-    <string name="error_short_phone_num">رقم الهاتف غير صحيح .... يجب أن يكون الرقم من عشر خانات</string>
+    <string name="error_signingin">لم تتم عملية تسجيل الدخول ... أعد المحاولة</string>
+    <string name="error_short_phone_num">رقم الهاتف غير صحيح .... الرجاء إدخال الرقم بالصيغة الدولية</string>
     <string name="error_incorrect_phone_num">رقم الهاتف غير صحيح ....</string>
-    <string name="error_user_name_required">يجب ان يكون الاسم مكون من ثلاث حروف على الأقل, حاول إختيار اسم يستطيع أصدقائك التعرف عليه</string>
-    
-    
+    <string name="error_user_name_required">يجب ان يكون الاسم مكون من حرفين على الأقل, حاول إختيار اسم يستطيع أصدقائك التعرف عليه</string>
+    <string name="error_job_required">قم بتحديد مهنتك او اختصاصك الدراسي لنتمكن من ايجاد افضل الشركاء لرحلاتك و تضمن قضاء وقت ممتع معهم</string>
+    <string name="error_gender_required">لا تنس تحديد الجنس</string>
+    <string name="gender_prompt">الجنس</string>
+    <string name="login_msg_facebook_account_already_exists">الجنس</string>
+
+    <string-array name="array_gender">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
     <!-- TUT -->
-    <string name="tut_desc1">شرح عن البرنامج</string>
-    <string name="tut_desc2">شرح عن البرنامج</string>
-    <string name="tut_desc3">شرح عن البرنامج</string>
+    <string name="tut1_desc1"></string>
+    <string name="tut1_desc2">خدني معك/nلح يساعدك تلاقي وسيلة مواصلات و تتشارك معهون بالمواصلات</string>
+    <string name="tut1_hint">يلا نطلع سوا!؟؟</string>
+    <string name="tut_desc1">تعبت من نطرة السيرفيسات</string>
+    <string name="tut_desc2">أو أنت بتنزل و بتطلع بسيارت و مصروف البنزين كسرلك الميزانية</string>
+    <string name="tut_desc3">هلق مع خدني معك لح نطلع و ننزل سوا و نتقاسم المصاريف و نتساعد لنحل مشكلة المواصلات</string>
+
+    <!-- login -->
+    <string name="login_prompt_fname">الاسم الأول</string>
+    <string name="login_prompt_lname">الاسم الأخير</string>
+    <string name="login_prompt_job">العمل أو الدراسة</string>
+    <string name="login_prompt_real_name">قم بإدخال اسمك الحقيقي لزيادة الثقة بينك وبين المستخدمين الآخرين.</string>
     
     <!-- MAIN -->
-    <string name="main_seg1">الرئيسية</string>
-    <string name="main_seg2">حلقات الذكر</string>
-    <string name="main_hadeeth_temp">حدبث شريف ... حديث شريف</string>
+    <string name="main_destination_hint">اخترالوجهة للبحث</string>
+    <string name="main_origin_hint">اختر مكان الانطلاق للبحث</string>
+    <string name="main_action_create_weekly_trip">انشاء رحلة متكررة أسبوعيا</string>
+    <string name="main_action_create_one_time_trip">انشاء رحلة واحدة</string>
+    <string name="main_trip_action_call">اتصال</string>
+    <string name="main_trip_action_chat">محادثة</string>
+    <string name="main_trip_action_send_request">طلب توصيلة</string>
+    <string name="main_trip_card_price_suffix">ل.س</string>
+    <string name="main_trip_card_date_prefix">يوم:</string>
+    <string name="main_trip_card_days_prefix">الأيام:</string>
+    <string name="main_trip_card_time_prefix">موعد الانطلاق:</string>
+    <string name="main_ride_request_sent_successfuly">تم ارسال طلب التوصيلة بنجاح، بانتظار رد السائق</string>
+    <string name="main_ride_request_sent_before">لقد طلبت هذه التوصيلة سابقا</string>
+    <string name="main_no_result_placeholder">لم نتمكن من ايجاد سائقين ليقلوك الى وجهتك حالياً، ساهم معنا بعريف أصدقاءك على التطبيق و مشاركته</string>
+    
+    <!-- my trips -->
+    <string name="my_trips_no_trips">لم تقم بانشاء أي رحلات خاصة بك بعد</string>
+    <string name="my_trips_no_trips_desc">يمكنك أ ن تقوم  بانشاء رحلة جديدة لنجد لك مستخدمين أخرين يتشاركونها معك</string>
+    <string name="my_trips_failed_to_load_trips">لم يتم تحميل الرحلات</string>
+    <string name="my_trips_failed_to_load_trips_desc">تحقق من الاتصال</string>
+    <string name="my_trips_failed_to_update_trips">لم يتم تحديث الرحلات</string>
+    <string name="my_trips_days_prefix">أيام الرحلة:</string>
+    <string name="my_trips_date_prefix">تاريخ الرحلة:</string>
+    <string name="my_trips_price_suffix">ل.س</string>
+    
+    <!-- event notifications -->
+    <string name="event_notification_msg_recived_ride_request_part1">أرسلَ إليك طلب توصيلة من</string>
+    <string name="event_notification_msg_recived_ride_request_part2">الى</string>
+    <string name="event_notification_msg_recived_ride_request_part3">مقابل</string>
+    <string name="event_notification_msg_recived_ride_responce_accepted_part1">وافق على توصيلك من</string>
+    <string name="event_notification_msg_recived_ride_responce_accepted_part2">الى</string>
+    <string name="event_notification_msg_recived_ride_responce_accepted_part3">مقابل</string>
+    <string name="event_notification_msg_recived_ride_responce_rejected_part1">لم يوافق على توصيلك من</string>
+    <string name="event_notification_msg_recived_ride_responce_rejected_part2">الى</string>
+    
+    <string name="event_notification_msg_sent_ride_request_part1">أرسلت طلب توصيلة الى</string>
+    <string name="event_notification_msg_sent_ride_request_part2">من</string>
+    <string name="event_notification_msg_sent_ride_request_part3">الى</string>
+    <string name="event_notification_msg_sent_ride_request_part4">مقابل</string>
+    <string name="event_notification_msg_sent_ride_responce_accepted_part1">وافقت على توصيل</string>
+    <string name="event_notification_msg_sent_ride_responce_accepted_part2">من</string>
+    <string name="event_notification_msg_sent_ride_responce_accepted_part3">الى</string>
+    <string name="event_notification_msg_sent_ride_responce_accepted_part4">مقابل</string>
+    <string name="event_notification_msg_sent_ride_responce_rejected_part1">لم توافق على توصيل</string>
+    <string name="event_notification_msg_sent_ride_responce_rejected_part2">الى</string>
+    
+    <string name="event_notification_btn_ride_request">موافق</string>
+    <string name="event_notification_no_trips">ليس لديك أي تنبيهات بعد</string>
+    <string name="event_notification_no_trips_desc">سيتم هنا عرض أي معلومات تتعلق ب طلبات التوصيلة التي تتلقاها أو ترسلها</string>
+    <string name="event_notification_failed_to_load_trips">فشل تحميل التنبيهات</string>
+    <string name="event_notification_failed_to_load_trips_desc">تحقق من اتصالك بالانترنت</string>
+    <string name="event_notification_failed_to_update_trips">لم يتم تحديث التنبيهات</string>
+    
+    <!-- conversations list -->
+    <string name="conversatoins_list_no_trips">لا يوجد لديك أي محادثات لعرضها</string>
+    <string name="conversatoins_list_no_trips_desc">سيتم هنا عرض جميع المحادثات التي تجريها مع المستخدمين الأخرين</string>
+    <string name="conversatoins_list_failed_to_load_trips">لم يتم تحميل المحادثات</string>
+    <string name="conversatoins_list_failed_to_load_trips_desc">تحقق من الاتصال</string>
+    <string name="conversatoins_list_failed_to_update_trips">لم يتم تحديث المحادثات</string>
     
     <!-- Drawer -->
-	<string name="drawer_main">main</string>
-	<string name="drawer_todo">TODO</string>
-	<string name="drawer_history">History</string>
-	<string name="drawer_settings">Settings</string>
-	<string name="drawer_about">About</string>
-	
-	<!-- loading  -->
-	<string name="loading_loading">جاري التحميل .....</string>
+    <string name="drawer_main">الرئيسية</string>
+    <string name="drawer_my_trips">رحلاتي</string>
+    <string name="drawer_settings">الإعدادات</string>
+    <string name="drawer_notifications">التنبيهات</string>
+    <string name="drawer_chats">المحادثات</string>
+    <string name="drawer_about">عن التطبيق</string>
+    <string name="drawer_logout">تسجيل الخروج</string>
+    <string name="drawer_feedback">ملاحظاتكم</string>
+    <string name="drawer_share">أخبر أصدقاءك عن سبعين</string>
+
+    <!-- loading -->
+    <string name="loading_loading">جاري التحميل .....</string>
+
+    <!-- tut -->
+    <string name="tut_plant_title">إبدأ بغرس نبتتك من الذكر</string>
+    <string name="tut_plant_msg">قم بالمحافظة على أذكارك اليومية ومشاركة الأذكار مع الأصدقاء لتنمو نبتتك و تبدأ بزراعة أخرى</string>
+    <string name="tut_self_title">إبدأ مع نفسك</string>
+    <string name="tut_self_msg">إضغط لتبدأ أذكارك اليومية</string>
+    <string name="tut_send_title">تشارك الخير</string>
+    <string name="tut_send_msg">إبدأ بحلقة ذكر مع أحد أصدقائك أو قم بدعوة أحد أصدقائك الغير مشتركين بالخدمة</string>
+    <string name="tut_task_buble_title">إبدأ بالتفاعل</string>
+    <string name="tut_task_buble_msg">يمكنك أن تقوم بالضغط على الأذكار التي تتبادلها مع الأصدقاء لتبدأ بتنفيذ المهمات التي يتشاركونها معك</string>
+
+    <!-- Verify -->
+    <string name="verif_desc">شكرا لإشتراكك معنا , ستصلك رسالة قصيرة تحتوي على رمز التفعيل على هاتفك الجوال</string>
+    <string name="verif_hint">أدخل هنا رمز التفعيل أو كلمة السر لحسابك</string>
+    <string name="verif_action_activate">تفعيل</string>
+    <string name="verif_action_resend_activation">إعادة إرسال رمز التفعيل</string>
+    <string name="verif_rerigister_text">يمكنك أن تقوم بإعادة إدخال رقمك من خلال</string>
+    <string name="verif_rerigister">اعادة تسجيل الدخول</string>
+    <string name="verif_err_verif_code_required">يجب ادخال رمز الـتأكيد</string>
+    <string name="verif_err_verif_code_invalid">رمز التأكيد خاطئ</string>
+    <string name="verif_err_verif_failed">لم تتم عملية الـتأكيد</string>
+    <string name="verif_err_failed_to_resend_verif_code">لم يتم إعادة إرسال رمز التفعيل</string>
+
+    <!-- Sharing and Suggestions -->
+    <string name="send_feedback_subj">حول سبعين</string>
+    <string name="send_feedback_dialog_title">أرسل عن طريق</string>
+    <string name="send_social_invitation_part1">شاركني ذكر الله و نفذ</string>
+    <string name="send_social_invitation_default_zecker">استغفر الله</string>
+    <string name="send_social_invitation_default_count">33 مرة</string>
+    <string name="send_social_invitation_part2">على تطبيق سبعين</string>
+    <string name="send_social_invitation_diag_title_part1">غير مشترك في سبعين, ارسل اليه دعوة ليعم الخير</string>
+    <string name="sharing_failed">للأسف فشلت عملية</string>
+    <string name="message_fb_not_installed">للأسف لم يتم ايجاد تطبيق الفيسبوك</string>
+    <string name="fb_invite_dialog_title">ادع أصدقاءك الى سبعين</string>
+    <string name="fb_invite_dialog_msg">لتتشاركو الخير</string>
     
+    <!-- Sharing -->
+    <string name="share_diag_after_create_rtip_msg">قم بتعريف أصدقائك على خدني معك من خلال مشاركة التطبيق على الفيسبوك</string>
+    <string name="share_diag_btn_ok">مشاركة</string>
+    <string name="share_diag_btn_cancel">إلغاء الأمر</string>
+    <string name="share_btn">ساهم بالنشر</string>
+    
+	<!-- STATS -->
+	<string name="stats_chart_title">إسغفاراتك خلال شهر</string>
+	<string name="stats_progresbar_title">أعمالك اليوم</string>
+	<string name="stats_general_stats_title">إحصاءات عامة</string>
+	<string name="stats_your_average_1">متوسط الأذكار</string>
+	<string name="stats_your_average_2">خلال اسبوع</string>
+	<string name="stats_your_best_partner_1">شريكك</string>
+	<string name="stats_your_best_partner_2">في الخير</string>
+	<string name="stats_your_doing_great">جزال الله خيرا لحفاظك على الوصية النبوية</string>
+	<string name="stats_your_doing_well">جزاك الله خيرا أنت تقترب من تحقيق الوصية النبوية</string>
+	<string name="stats_your_doing_normal">بارك الله فيك و استمر لتقترب أكثر من الحفاظ على الوصية النبوية</string>
+	<string name="stats_your_doing_bad">ضاعف جهودك للحفاظ على وصية النبي</string>
+	<string name="stats_data_empty">ليس لديك احصاءات لعرضها بعد</string>
+	<string name="stats_error_occured_while_rendering">حدث خطأ أثناء عرض الإحصائيات</string>
+
+    
+    <!-- ABOUT -->
+    <string name="about_app_desc">سبعين هو أول تطبيق يساعدك في يومك للقيام بالأذكار ومشاركة تنفيذها مع من تحب .</string>
+    <string name="about_self_task">استخدم سبعين للقيام باسغفاراتك اليومية</string>
+    <string name="about_with_friends">او تبادل الأذكار مع أصدقائك</string>
+    <string name="about_for_more">تابعونا على</string>
+    <string name="about_developed_by">تم التطوير في</string>
+    <string name="about_rights_reserved">سبعين الحقوق محفوظة © 2015</string>
+    
+    <!-- SOON -->
+    <string name="diag_soon_create_groups_msg">سيكون بامكانك قريبا انشاء مجموعات للذكر, تتشارك من خلالها مع أصدقائك ذكر الله </string>
+    <string name="diag_soon_create_groups_ok">اغلاق</string>
+    <string name="frag_trip_card_from">من : </string>
+    <string name="frag_trip_card_to">إلى : </string>
+    <string name="row_todo_launch_time">تاريخ الإنطلاق :</string>
+    <string name="row_todo_price">السعر:</string>
+    <string name="event_notification_btn_accept">موافق</string>
+    <string name="event_notification_btn_reject">رفض</string>
+    <string name="row_event_user_request">يطلب منك </string>
+    <string name="row_event_user_request1">أن توصله على طريقك</string>
+    <string name="row_event_from">من</string>
+    <string name="row_event_to">إلى</string>
+    <string name="row_event_inreturn">مقابل</string>
+    <string name="row_event_user_resp">قمت بإرسال طلب توصيلة إلى</string>
+    <string name="row_event_user_resp1">ليوصلك على طريقه</string>
+    <string name="row_event_user_request2">تم قبول الطلب,</string>
+    <string name="row_event_user_request3">تم قبول طلب</string>
+    <string name="row_event_is">هو:</string>
+    <string name="row_event_contact_him">اتصل به للاتفاق على باقي التفاصيل</string>
+    <string name="row_event_contact_him_call">اضغط على زر الاتصال, للاتصال به والاتفاق على باقي التفاصيل</string>
+    <string name="row_event_rejected">للأسف لقد تم رفض الطلب.</string>
+    <string name="row_event_no_answer_yet">لم يرد</string>
+    <string name="row_event_your_request">على طلبك بعد.</string>
+    <string name="add_trip_activity_success">تمت إضافة الرحلة بنجاح</string>
+    <string name="frag_my_trips_delete_trip_error">حدث خطأ أثناء حذف الرحلة</string>
+    <string name="frag_my_trips_empty">فاضي</string>
+    <string name="frag_my_trips_full">مكدوس</string>
+    <string name="frag_my_trip_delete_trip">حذف الرحلة</string>
+    <string name="frag_my_trips_is_full_activated">تم تفعيل وضعية المكدوس, لن يتمكن الآخرون من إرسال طلبات توصيل جديدة إليك منذ الآن</string>
+    <string name="frag_my_trips_is_full_deactivated">تم إلغاء وضعية المكدوس. يمكن للآخرين من الآن فصاعداً إرسال طلبات توصيل إليك</string>
+    <string name="diag_msg_warning">تنبيه</string>
+    <string name="diag_msg_ok">موافق</string>
+    <string name="diag_msg_what_next">ماذا بعد ؟</string>
+    <string name="drawer_my_profile">حسابي</string>
+    <string name="frag_user_profile_age">العمر</string>
+    <string name="frag_user_profile_save">حفظ</string>
+    <string name="frag_user_profile_photo_for_face">اختيارك لصورة يكون فيها وجهك واضحاً فيها سيزيد من ثقة المستخدمين الآخرين بك .</string>
+    
+    <!-- diag pick foto from -->
+    <string name="pick_photo_gallery">اختيار صورة من الملفات</string>
+    <string name="pick_photo_cam">التقاط صورة</string>
+    <string name="pick_photo_cancel">إلغاء الأمر</string>
+    <string name="error_server_error">هناك خطأ في المخدم</string>
+    <string name="diag_confirm_btn_yes">موافق</string>
+    <string name="diag_confirm_btn_cancel">إلغاء</string>
+    <string name="advertise_details_btn_facebook_share">مشاركة على فيس بوك</string>
+    <string name="frag_user_profile_first_name_required">الاسم الأول مطلوب</string>
+    <string name="frag_user_profile_last_name_required">الاسم الأخير مطلوب</string>
+    <string name="frag_user_profile_update_failed">فشلت عملية حفظ التعديلات</string>
+    <string name="frag_user_profile_update_success">تم تعديل معلومات حسابك بنجاح</string>
 
 </resources>

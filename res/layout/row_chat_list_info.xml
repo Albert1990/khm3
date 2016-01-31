@@ -9,7 +9,7 @@
     android:paddingTop="4dp" 
     android:orientation="vertical">
 
-    <com.brainSocket.socialrosary.views.TextViewCustomFont
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
         android:id="@+id/tvInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

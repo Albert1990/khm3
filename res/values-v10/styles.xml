@@ -12,10 +12,13 @@
             backward-compatibility can go here.
         -->
         <item name="toolbarStyle">@style/ToolbarStyle</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
        <!--  <item name="toolbarStyle">@style/ToolbarStyle</item> -->
         <item name="colorPrimary">@color/app_theme1</item>
         <item name="colorPrimaryDark">@color/app_theme1</item>
         <item name="colorAccent">@color/app_theme1</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <!-- Application theme. -->
@@ -26,6 +29,10 @@
     <style name="ToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
         <item name="contentInsetStart">0dp</item>
         <!-- <item name="android:contentInsetStart">0dp</item> -->
+    </style>
+    
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@color/app_theme1</item>
     </style>
 
 </resources>

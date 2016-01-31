@@ -18,10 +18,10 @@
     <dimen name="corner_radius_big">13dp</dimen>
     <dimen name="corner_radius_normal">8dp</dimen>
     <dimen name="corner_radius_small">3dp</dimen>
-
+    
     <!-- CONVERSATIONS -->
-    <dimen name="conversations_list_elem_height">90dp</dimen>
-    <dimen name="conversations_list_profile_pic_height">75dp</dimen>
+    <dimen name="conversations_list_elem_height">80dp</dimen>
+    <dimen name="conversations_list_profile_pic_height">70dp</dimen>
     <dimen name="conversations_list_name_margin">65dp</dimen>
     
     
@@ -30,6 +30,21 @@
 	 
     
     
+    <!-- diag createTask -->
+    <dimen name="diag_create_task_width">300dp</dimen>
+    <dimen name="diag_create_task_height">350dp</dimen>
+    <dimen name="diag_create_task_controlls_width">220dp</dimen>
+    <dimen name="diag_create_task_num_picker_width">200dp</dimen>
+    <dimen name="diag_create_task_num_picker_height">90dp</dimen>
+    <dimen name="diag_create_task_ziker_picker_height">150dp</dimen>
+    <dimen name="diag_create_task_margin_top">60dp</dimen>
+    <dimen name="diag_create_task_margin_bottom">45dp</dimen>
+    
+    <!-- main -->
+    <dimen name="main_plant_height">175dp</dimen>
+    
+    <!-- Diag Alert -->
+    <dimen name="dialog_alert_width">300dp</dimen>
     
     <!-- Flat Btn -->
     <dimen name="fbutton_default_conner_radius">8dp</dimen>
@@ -41,5 +56,17 @@
     
     <!-- drawer -->
     <dimen name="textview_height">64dp</dimen>
+    
+    <!-- TUT -->
+    <dimen name="tut_img_height">350dp</dimen>
+    
+    <!-- STATS -->
+    <dimen name="stats_margin">10dp</dimen>
+    
+    <!-- INT -->
+    <integer name="rose_anim_frame_duration">100</integer>
+    <integer name="water_anim_frame_duration">100</integer>
+    <integer name="irrigation_anim_frame_duration">100</integer>
+    
 
 </resources>

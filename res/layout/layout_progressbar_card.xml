@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvExpMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/ts_text_xsmall"
+        app:fontId="2" />
+
+    <ImageView
+        android:id="@+id/ivProgressMax"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_app_name_white" />
+
+    <ProgressBar
+        android:id="@+id/pbExp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/ivProgressMax"
+        android:layout_marginTop="4dp"
+        android:progress="20"
+        android:progressDrawable="@drawable/layer_exp_progressbar_green" />
+
+</RelativeLayout>

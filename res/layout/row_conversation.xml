@@ -7,98 +7,105 @@
     android:clipChildren="false" >
 
     <RelativeLayout
+        android:id="@+id/vDataContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignRight="@+id/vPhotoContainer"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/bg_list"
         android:clipChildren="false"
-        android:layout_marginLeft="26dp"
-        android:paddingBottom="10dp"
+        android:paddingBottom="9dp"
         android:paddingTop="5dp" >
 
-        <com.brainSocket.socialrosary.views.TextViewCustomFont
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="@dimen/conversations_list_name_margin"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="7dp"
             android:text="Name"
             android:textColor="@color/gray_dark"
             android:textSize="@dimen/ts_text_normal"
             app:fontId="2" />
 
-        <com.brainSocket.socialrosary.views.TextViewCustomFont
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
             android:id="@+id/tvDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvName"
             android:layout_alignParentRight="true"
-            android:layout_toLeftOf="@+id/ivNetworkIcon"
+            android:layout_below="@id/tvName"
+            android:gravity="right"
             android:layout_marginRight="@dimen/conversations_list_name_margin"
             android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/ivNetworkIcon"
+            android:layout_toRightOf="@+id/vUnreadMsgsContainer"
             android:text="Date"
+            android:singleLine="true"
             android:textSize="@dimen/ts_text_normal"
-            app:fontId="2" />
+            app:fontId="1" />
 
-        <com.brainSocket.socialrosary.views.TextViewCustomFont
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="7dp"
             android:text="Date"
             android:textColor="@color/gray"
             android:textSize="@dimen/ts_text_normal"
-            app:fontId="2" />
+            app:fontId="3" />
 
-        <ImageView
-            android:id="@+id/ivNetworkIcon"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/tvDate"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="25dp"
+       
+
+        <FrameLayout
+            android:id="@+id/vUnreadMsgsContainer"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_app_indicator" />
+            android:layout_below="@id/tvDate"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvUnreadMsgsCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|bottom"
+                android:gravity="center"
+                android:text="2"
+                android:background="@drawable/shape_oval_notification"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_text_small"
+                android:textStyle="bold" />
+        </FrameLayout>
     </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/vPhotoContainer"
         android:layout_width="@dimen/conversations_list_profile_pic_height"
         android:layout_height="@dimen/conversations_list_profile_pic_height"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
         android:layout_alignParentRight="true" >
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/bg_photo_normal" />
+            android:src="@drawable/shape_oval_contact_ring" />
 
-        <com.brainSocket.socialrosary.views.MLRoundedImageView
+        <com.brainSocket.khednima3ak3.views.MLRoundedImageView
             android:id="@+id/ivPhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="7dp"
+            android:layout_margin="2dp"
             android:clickable="false"
             android:scaleType="fitXY"
-            android:src="@drawable/img_contact" />
+            android:src="@drawable/default_male_user" />
     </FrameLayout>
 
-    
-    <ImageView
-        android:id="@+id/ivDecoration"
-        android:layout_width="35dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/dr_list_decoration"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="9dp"
-        android:scaleType="fitXY" 
-        />
-    
 </RelativeLayout>

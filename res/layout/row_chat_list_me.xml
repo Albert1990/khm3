@@ -3,43 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="4dp"
-    android:paddingTop="4dp" >
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp" >
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/vImgContainer"
+        android:layout_alignTop="@+id/vImgContainer"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_buble_green_right"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="45dp"
+        android:gravity="right"
+        android:paddingTop="7dp"
+        android:text="hghgh ev es  ggrgs ggsd gsg s sgf "
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/ts_text_normal"
+        app:fontId="1" />
+
+      <ImageView
+        android:id="@+id/ivCheckMe"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignRight="@id/tvMe"
+        android:layout_below="@id/tvMe"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_check_green" />
+    
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvPendingMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ivCheckMe"
+        android:layout_below="@id/tvMe"
+        android:text="@string/place_holder"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_text_xsmall"
+        android:layout_marginRight="2dp"
+        app:fontId="3" />
+
+  
 
     <FrameLayout
         android:id="@+id/vImgContainer"
         android:layout_width="@dimen/conversation_event_picture_size"
         android:layout_height="@dimen/conversation_event_picture_size"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
         android:layout_marginRight="10dp" >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/bg_photo_normal" />
-
-        <com.brainSocket.socialrosary.views.MLRoundedImageView
+        
+        <com.brainSocket.khednima3ak3.views.MLRoundedImageView
             android:id="@+id/ivMe"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="7dp"
+            android:layout_margin="4dp"
             android:clickable="false"
             android:scaleType="fitXY"
-            android:src="@drawable/img_contact" />
+            android:src="@drawable/default_male_user" />
     </FrameLayout>
-
-    <com.brainSocket.socialrosary.views.TextViewCustomFont
-        android:id="@+id/tvMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="7dp"
-        android:layout_toLeftOf="@id/vImgContainer"
-        android:background="@drawable/chat_buble_me"
-        android:padding="7dp"
-        app:fontId="2" />
 
 </RelativeLayout>

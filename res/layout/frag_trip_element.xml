@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_with_shadow_off_white"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="7.6dp"
+    android:paddingBottom="7.6dp"
+    android:paddingRight="7.6dp"
+    android:paddingLeft="7.6dp" >
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="-----"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_title_normal"
+        app:fontId="1" />
+    
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvPrice"
+        android:layout_marginLeft="16dp"
+        android:gravity="center"
+        android:text="@string/frag_my_trips_full"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_title_normal"
+        app:fontId="1" />
+
+    <!-- place -->
+
+    <View
+        android:id="@+id/vVerticalLine"
+        android:layout_width="3dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvOirgin"
+        android:layout_marginRight="14.4dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/app_theme1" />
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvOirgin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/ic_bullet_from"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="-----"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_text_big"
+        app:fontId="1" />
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvDest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vVerticalLine"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-10dp"
+        android:layout_marginRight="6dp"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/ic_bullet_to"
+        android:gravity="right"
+        android:text="-----"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_text_big"
+        app:fontId="1" />
+    <!-- end of place -->
+
+
+    <!-- time -->
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvDest"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="14dp"
+        android:drawablePadding="8dp"
+        android:gravity="right"
+        android:text="-----"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_text_big"
+        app:fontId="1" />
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvTime"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="8dp"
+        android:gravity="right"
+        android:text="-----"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/ts_text_normal"
+        app:fontId="1" />
+    <!-- end of time -->
+    
+    
+    <FrameLayout
+        android:id="@+id/flUserPhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="5dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/shape_oval_contact_ring" />
+
+        <com.brainSocket.khednima3ak3.views.MLRoundedImageView
+            android:id="@+id/ivUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_male_user" />
+    </FrameLayout>
+    
+    
+    <!--<com.brainSocket.khednima3ak3.views.MLRoundedImageView
+        android:id="@+id/ivUser"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/img_contact" />-->
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="95dp"
+        android:layout_toLeftOf="@id/flUserPhoto"
+        android:text="y----"
+        android:textColor="@color/txt_xdark"
+        android:textSize="@dimen/ts_title_small"
+        app:fontId="1" />
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/flUserPhoto"
+        android:gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="80dp"
+        android:text="x----"
+        android:textColor="@color/txt_light"
+        android:textSize="@dimen/ts_text_normal"
+        app:fontId="1" />
+
+    <LinearLayout
+        android:id="@+id/btnsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_rounded_card_bottom_bar"
+        android:orientation="horizontal" >
+
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/main_trip_action_call"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_text_big"
+            app:fontId="1" />
+        
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/btnSendReq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="@string/main_trip_action_send_request"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_text_big"
+            app:fontId="1" />
+
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/btnChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/main_trip_action_chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_text_big"
+            app:fontId="1" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -9,23 +9,23 @@
     android:focusableInTouchMode="false"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:paddingTop="6dp"
-    android:paddingBottom="6dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
     android:paddingRight="10dp"
     android:paddingLeft="10dp" >
     
 
     <ImageView
         android:id="@+id/drawable_icon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
         android:padding="2dp"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_friends" />
+        android:src="@drawable/ic_timeline" />
 
-    <com.brainSocket.socialrosary.views.TextViewCustomFont
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

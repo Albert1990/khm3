@@ -38,6 +38,12 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center_vertical">
+        
+        <com.brainSocket.khednima3ak3.views.ImageViewAppBG 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg2"
+            android:scaleType="fitXY"/>
 
     </RelativeLayout>
 

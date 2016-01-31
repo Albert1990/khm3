@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dialog_alert_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llDescContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_face"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <ae.alphaapps.android.almwajaha.ui.TextViewCustomFont
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/share_diag_after_create_rtip_msg"
+            android:textColor="@color/txt_dark"
+            android:textSize="@dimen/ts_text_normal"
+            app:fontId="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#803c4349" />
+
+    <LinearLayout
+        android:id="@+id/llFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="2.0" >
+
+        <ae.alphaapps.android.almwajaha.ui.TextViewCustomFont
+            android:id="@+id/tvBtnLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="@string/share_diag_btn_cancel"
+            android:textColor="@color/txt_dark"
+            android:textSize="@dimen/ts_text_normal"
+            app:fontId="1" />
+
+        <View
+            android:layout_width="0.4dp"
+            android:layout_height="match_parent"
+            android:background="#803c4349" />
+
+        <ae.alphaapps.android.almwajaha.ui.TextViewCustomFont
+            android:id="@+id/tvBtnRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="@string/share_diag_btn_ok"
+            android:textColor="@color/txt_dark"
+            android:textSize="@dimen/ts_text_normal"
+            app:fontId="1" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,118 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/vSegmentView"
+        android:id="@+id/vSearchCardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:background="@drawable/layer_bar_with_bottom_shadow"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        
+        <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/gray_4" />
+        
+        <LinearLayout
+        android:id="@+id/vSearchCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_bar_with_bottom_shadow"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="18dp">
 
-        <com.brainSocket.socialrosary.views.TextViewCustomFont
-            android:id="@+id/tvSegment1"
-            android:layout_width="wrap_content"
+        
+        <com.brainSocket.khednima3ak3.views.SearchAutoComplete
+            android:id="@+id/autocompleteDest"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_seg_l_active"
-            android:gravity="center"
-            android:text="@string/main_seg1"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:completionThreshold="1"
+            android:hint="@string/main_destination_hint"
+            android:maxLines="1"
+            android:popupBackground="#aaaaaaaa"
+            android:singleLine="true"
             android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_text_normal" />
+
+        <com.brainSocket.khednima3ak3.views.SearchAutoComplete
+            android:id="@+id/autocompleteOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:completionThreshold="1"
+            android:hint="@string/main_origin_hint"
+            android:maxLines="1"
+            android:popupBackground="#aaaaaaaa"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_text_normal" />
+    </LinearLayout>
+        
+        </LinearLayout>
+    
+    
+
+    <com.brainSocket.khednima3ak3.views.CarousellViewPager
+        android:id="@+id/vpCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/vSearchCardLayout"
+        android:paddingTop="8dp"
+        android:paddingBottom="5dp" >
+    </com.brainSocket.khednima3ak3.views.CarousellViewPager>
+
+    <LinearLayout
+        android:id="@+id/vNoResultsPlaceHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical" >
+
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/main_no_result_placeholder"
+            android:textColor="@color/gray_dark"
             android:textSize="@dimen/ts_text_normal"
             app:fontId="1" />
 
-        <com.brainSocket.socialrosary.views.TextViewCustomFont
-            android:id="@+id/tvSegment2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_seg_r"
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/btnShareOnFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_fcb_btn_splash"
             android:gravity="center"
-            android:padding="8dp"
-            android:text="@string/main_seg2"
+            android:text="@string/share_btn"
             android:textColor="@android:color/white"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:drawableLeft="@drawable/ic_face_small"
+            android:textSize="@dimen/ts_text_normal"
             app:fontId="1" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_below="@id/vSegmentView"
-        android:orientation="horizontal" >
-
-        <RelativeLayout
-            android:id="@+id/RlSegment1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <com.brainSocket.socialrosary.views.TextViewCustomFont
-                android:id="@+id/tvHadeeth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:text="@string/main_hadeeth_temp"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/ts_text_big"
-                app:fontId="1" />
-
-            <ImageView
-                android:id="@+id/ivPlant"
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/img_rose1" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/RlSegment2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp" >
-
-            <com.brainSocket.socialrosary.views.EditTextCustomFont
-                android:id="@+id/etFilter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_edittext"
-                android:gravity="center"
-                android:padding="2dp"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_text_big" />
-
-            <ListView
-                android:id="@+id/lvContacts"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/etFilter"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="0dp"
-                tools:listitem="@layout/row_conversation" >
-            </ListView>
-        </RelativeLayout>
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/btnStartSelfTask"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="right|bottom"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"/>
+    
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/btn_self_task" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="#FFB805"
+        fab:menu_colorPressed="#F2AB00"
+        fab:menu_colorRipple="#D99200"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_shadowColor="#444" >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnCreateOneTrip"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_one_time_trip"
+            fab:fab_label="@string/main_action_create_one_time_trip" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnCreateWeekly"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_requrring_trip"
+            fab:fab_label="@string/main_action_create_weekly_trip" />
+    </com.github.clans.fab.FloatingActionMenu>
 
 </RelativeLayout>

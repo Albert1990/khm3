@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tutorialRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bb000000" >
+
+    <ImageView
+        android:id="@+id/ivHighlitedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_70_mara_txt" />
+
+    <LinearLayout
+        android:id="@+id/flBuble"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/ivHighlitedView"
+        android:layout_alignLeft="@+id/ivHighlitedView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_margin="7dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivArrow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/arrow_bottom" 
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/ivArrow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-5dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/arrow_bottom" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTutDescContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/flBuble"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/ivClose"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/tvTutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:gravity="center_horizontal|bottom"
+            android:text="_title_random"
+            android:textColor="@color/app_theme1"
+            android:textSize="@dimen/ts_title_small"
+            app:fontId="2" />
+
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/tvTutMsg1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="10dp"
+            android:text="msg1_quick"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_text_normal"
+            app:fontId="1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_check_green" />
+
+</RelativeLayout>

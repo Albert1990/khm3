@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="global_bg_color">#fff3e9cd</color>
-    <color name="app_theme1">#28856e</color>
+    <!-- <color name="global_bg_color">#c6e0e7</color> -->
+    <!-- <color name="app_theme1">#323232</color> -->
+    
+    <color name="global_bg_color">#c6e0e7</color>
+    <!-- <color name="app_theme1">#3eb6e2</color>-->
+    <color name="app_theme1">#454748</color>
+    
+    <!-- <color name="global_bg_color">#d8e7c6</color>
+    <color name="app_theme1">#e8eff2</color> -->
+    
+    <color name="app_theme1_light">#5fc8ad</color>
     <color name="app_theme2">#006852</color>
+    <color name="app_theme_orange">#f1ad47</color>
 
     <!-- btns -->
-    <color name="btn_color1">#975c52</color>
+    <color name="btn_color1">#0dc3a3</color>
     <color name="btn_color1_active">#975c52</color>
     <color name="btn_color2">#a4bac0</color>
     <color name="btn_color2_active">#a4bac0</color>
     <color name="blue_facebook">#3d5a99</color>
     <color name="fbutton_default_color">#3eadeb</color>
     <color name="fbutton_default_shadow_color">#ff3493c8</color>
-    <!--  -->
+    
+    <!-- add Trip -->
+	<color name="done_text_color_disabled">#ffcccccc</color>
+    <color name="done_text_color_normal">#ff333333</color>
+    <color name="recurrence_bubble_text_normal">#ff737373</color>
 
+    <color name="txt_light">#5a6b77</color>
+    <color name="txt_dark">#485864</color>
+    <color name="txt_xdark">#2c353a</color>
+    
     <color name="black_light">#141414</color>
     <color name="gray_dark">#333</color>
     <color name="gray">#555</color>
     <color name="gray_light">#999</color>
     <color name="gray_off_white">#ddd</color>
+    <color name="of_white">#eee</color>
+    
+    <color name="gray_1">#ddd</color>
+    <color name="gray_2">#bbb</color>
+    <color name="gray_3">#999</color>
+    <color name="gray_4">#666</color>
+    <color name="gray_5">#333</color>
+    <color name="gray_6">#111</color>
+    
+    <color name="green_light">#6fc09e</color>
+    
+    <!-- diag create task -->
+    <color name="diag_create_task_number_active">#6fc09e</color>
+    <color name="diag_create_task_number_inactive">#666</color>
+    
+    <!-- about -->
+    <color  name="about_us_card_bg1">#bb28856e</color>
+    <color  name="about_us_card_bg2">#88006852</color>
+    <color  name="about_us_card_bg3">#66000000</color>
+    
+    <!-- stats -->
+    <color name="stats_chart_title">#99ffffff</color>
+    <color name="stats_chart_line">#ffffff</color>
+    <color name="stats_chart_line_bg">#9999ff</color>
+    <color name="stats_chart_grid_line">#99ff99</color>
+    <color name="stats_chart_grid_line_bg">#ff9999</color>
+    <color name="stats_chart_axis">#66ffffff</color>
+    <color name="app_blue">#1A9FD9</color>
+    <color name="app_green">#1DB752</color>
 
 </resources>

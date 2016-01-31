@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+      
+    <!-- diag createTask -->
+    <dimen name="diag_create_task_width">350dp</dimen>
+    <dimen name="diag_create_task_height">400dp</dimen>
+    <dimen name="diag_create_task_controlls_width">250dp</dimen>
+    <dimen name="diag_create_task_num_picker_width">230dp</dimen>
+    <dimen name="diag_create_task_num_picker_height">105dp</dimen>
+    <dimen name="diag_create_task_ziker_picker_height">170dp</dimen>
+    <dimen name="diag_create_task_margin_top">67dp</dimen>
+    <dimen name="diag_create_task_margin_bottom">50dp</dimen>
+    
+    <dimen name="main_plant_height">300dp</dimen>
+    
+  </resources>

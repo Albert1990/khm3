@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/ts_title_normal"
+        app:fontId="2" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/diag_create_task_width"
+        android:layout_height="@dimen/diag_create_task_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp" >
+
+        <ImageView
+            android:id="@+id/vSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_trans_diag_big" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/vSpinner"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/dr_shadow_spot" />
+
+        <com.brainSocket.khednima3ak3.views.CarousellViewPager
+            android:id="@+id/lvZickersList"
+            android:layout_width="@dimen/diag_create_task_controlls_width"
+            android:layout_height="@dimen/diag_create_task_ziker_picker_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/diag_create_task_margin_top"
+            layout="@layout/row_dilaog_zicker_list"
+            android:gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="15dp" />
+
+        <ImageView
+            android:id="@+id/ivArrowRight"
+            android:layout_width="25dp"
+            android:layout_height="0dp"
+            android:layout_alignBottom="@id/lvZickersList"
+            android:layout_alignRight="@id/lvZickersList"
+            android:layout_alignTop="@id/lvZickersList"
+            android:layout_marginRight="2dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/arrow_right" />
+
+        <ImageView
+            android:id="@+id/ivArrowLeft"
+            android:layout_width="25dp"
+            android:layout_height="0dp"
+            android:layout_alignBottom="@id/lvZickersList"
+            android:layout_alignLeft="@id/lvZickersList"
+            android:layout_alignTop="@id/lvZickersList"
+            android:layout_marginLeft="2dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/arrow_left" />
+
+        <LinearLayout
+            android:id="@+id/vCountContainer"
+            android:layout_width="@dimen/diag_create_task_num_picker_width"
+            android:layout_height="@dimen/diag_create_task_num_picker_height"
+            android:layout_above="@+id/vBtnsContainer"
+            android:layout_below="@id/lvZickersList"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnCount1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/diag_create_task_number_inactive"
+                android:textSize="@dimen/ts_title_small" />
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnCount2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/diag_create_task_number_active"
+                android:textSize="@dimen/ts_title_small" />
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnCount3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/diag_create_task_number_inactive"
+                android:textSize="@dimen/ts_title_small" />
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnCount4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="33"
+                android:textColor="@color/diag_create_task_number_inactive"
+                android:textSize="@dimen/ts_title_small" />
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnCount5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="70"
+                android:textColor="@color/diag_create_task_number_inactive"
+                android:textSize="@dimen/ts_title_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vBtnsContainer"
+            android:layout_width="@dimen/diag_create_task_controlls_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/diag_create_task_margin_bottom"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnCansel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="إالغاء الأمر"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/ts_text_normal"
+                app:fontId="2" />
+
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+                android:id="@+id/btnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="موافق"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/ts_text_normal"
+                app:fontId="2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

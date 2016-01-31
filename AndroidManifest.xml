@@ -1,78 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.brainSocket.socialrosary"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.brainSocket.khednima3ak3"
+    android:versionCode="2"
+    android:versionName="0.9.0" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-	
-	<permission
-        android:name="com.brainSocket.socialrosary.permission.C2D_MESSAGE"
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <permission
+        android:name="com.brainSocket.khednima3ak3.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-	<uses-permission android:name="com.brainSocket.socialrosary.permission.C2D_MESSAGE" />
-    
-	
-	
-    
+
+    <uses-permission android:name="com.brainSocket.khednima3ak3.permission.C2D_MESSAGE" />
+
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="21" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
 
     <application
+        android:name="com.brainSocket.khednima3ak3.KhedniApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:name="RosaryApp">
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.brainSocket.socialrosary.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.brainSocket.khednima3ak3.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:theme="@style/AppTheme" >
         </activity>
-        <activity android:name="LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity
+            android:name="com.brainSocket.khednima3ak3.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateVisible" >
         </activity>
-        <activity android:name="SplashScreen" >
+        <activity
+            android:name="com.brainSocket.khednima3ak3.SplashScreen"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+          
         </activity>
-        <activity android:name="TutActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity
+            android:name="com.brainSocket.khednima3ak3.TutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
-        <activity android:name=".contacts.ContactsList" >
+        <activity
+            android:name="com.brainSocket.khednima3ak3.ConversationActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="ConversationActivity"></activity>
+        <activity
+            android:name="com.brainSocket.khednima3ak3.ActivityEventPrompt"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.brainSocket.khednima3ak3.ActivityDoTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
         
-        
+        <activity
+            android:name="com.brainSocket.khednima3ak3.AddTripActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+
         <!-- GCM -->
         <receiver
-            android:name="com.brainSocket.socialrosary.GcmBroadcastReceiver"
+            android:name="com.brainSocket.khednima3ak3.GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.brainSocket.socialrosary" />
+                <category android:name="com.brainSocket.khednima3ak" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".GcmIntentService" />
+        <service android:name="com.brainSocket.khednima3ak3.GcmIntentService" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        
+         <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider2152384986866133"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
         
         
+        <activity
+            android:name="com.brainSocket.khednima3ak3.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

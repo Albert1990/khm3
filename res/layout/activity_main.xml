@@ -3,35 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/dlDrawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        
-        <ImageView 
+        android:layout_height="match_parent"
+            android:background="@color/global_bg_color" >
+
+        <com.brainSocket.khednima3ak3.views.ImageViewAppBG
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/bg1"
-            android:scaleType="fitXY"/>
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:alpha="0.3"
+            android:src="@drawable/bg2" />
+
+        <com.brainSocket.khednima3ak3.views.TextViewCustomFont
+            android:id="@+id/tvNotificationMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_theme1"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="لرسل اليك ابو عبدو ذكرا جديدا"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_text_small"
+            app:fontId="1" />
 
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvNotificationMsg" >
         </FrameLayout>
 
-       
-        
         <LinearLayout
             android:id="@+id/llLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:padding="12dp"
-            android:background="@color/app_theme1"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="12dp" >
 
             <ProgressBar
                 android:id="@+id/spinner"
@@ -40,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
 
-            <com.brainSocket.socialrosary.views.TextViewCustomFont
+            <com.brainSocket.khednima3ak3.views.TextViewCustomFont
                 android:id="@+id/tvLoadingMsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,12 +62,13 @@
                 android:text="@string/app_name"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_text_big"
+                android:visibility="gone"
                 app:fontId="1" />
         </LinearLayout>
     </RelativeLayout>
 
     <include
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="match_parent"
         android:layout_gravity="right"
         layout="@layout/drawer" />
